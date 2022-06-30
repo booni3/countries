@@ -2,6 +2,8 @@
 
 namespace Booni3\Countries;
 
+use Support\Helpers\ISO3;
+
 class ISO2
 {
     public static function list(): array
@@ -9,7 +11,14 @@ class ISO2
         return self::list;
     }
 
-    public static function iso($name): ?string
+    public static function fromIso3($iso3): ?string
+    {
+        $name = ISO3::nameFromIso($iso3);
+
+        return ISO2::isoFromName($name);
+    }
+
+    public static function isoFromName($name): ?string
     {
         if(! $name) return null;
 
@@ -22,7 +31,7 @@ class ISO2
         })->keys()->first();
     }
 
-    public static function name($iso2): ?string
+    public static function nameFromIso($iso2): ?string
     {
         if(! $iso2) return null;
 

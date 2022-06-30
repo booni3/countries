@@ -13,12 +13,12 @@ class Countries
 
     public function nameToIso2($name): ?string
     {
-        return ISO2::iso($name);
+        return ISO2::isoFromName($name);
     }
 
     public function iso2ToName($iso): ?string
     {
-        return ISO2::name($iso);
+        return ISO2::nameFromIso($iso);
     }
 
     public function iso3List(): array
@@ -28,11 +28,11 @@ class Countries
 
     public function nameToIso3($name): ?string
     {
-        return ISO3::iso($name);
+        return ISO3::isoFromName($name);
     }
 
     public function iso3ToName($iso): ?string
     {
-        return ISO3::name($iso);
+        return ISO3::nameFromIso($iso);
     }
 }
