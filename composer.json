@@ -1,0 +1,54 @@
+{
+    "name": "booni3/countries",
+    "description": "Country Code Converter",
+    "keywords": [
+        "booni3",
+        "countries"
+    ],
+    "homepage": "https://github.com/booni3/countries",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Adam Lambert",
+            "email": "booni3@pm.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Booni3\\Countries\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Booni3\\Countries\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Booni3\\Countries\\CountriesServiceProvider"
+            ],
+            "aliases": {
+                "Countries": "Booni3\\Countries\\CountriesFacade"
+            }
+        }
+    }
+}
