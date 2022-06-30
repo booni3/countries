@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Booni3\Countries;
-
 
 class ISO2
 {
