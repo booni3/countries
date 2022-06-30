@@ -4,9 +4,14 @@
 namespace Booni3\Countries;
 
 
-class ISO2CountryCodeConverter
+class ISO2
 {
-    public static function nameToIso2($name): ?string
+    public static function list(): array
+    {
+        return self::list;
+    }
+
+    public static function iso($name): ?string
     {
         if(! $name) return null;
 
@@ -19,7 +24,7 @@ class ISO2CountryCodeConverter
         })->keys()->first();
     }
 
-    public static function iso2ToName($iso2): ?string
+    public static function name($iso2): ?string
     {
         if(! $iso2) return null;
 

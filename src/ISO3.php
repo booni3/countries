@@ -4,9 +4,14 @@
 namespace Support\Helpers;
 
 
-class ISO3CountryCodeConverter
+class ISO3
 {
-    public static function nameToIso3($name): ?string
+    public static function list(): array
+    {
+        return self::list;
+    }
+
+    public static function iso($name): ?string
     {
         if (! $name) return null;
 
@@ -19,7 +24,7 @@ class ISO3CountryCodeConverter
         })->keys()->first();
     }
 
-    public static function iso3ToName($iso3): ?string
+    public static function name($iso3): ?string
     {
         if (! $iso3) return null;
 
