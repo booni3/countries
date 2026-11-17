@@ -1,10 +1,7 @@
 <?php
 
 
-namespace Support\Helpers;
-
-
-use Booni3\Countries\ISO2;
+namespace Booni3\Countries;
 
 class ISO3
 {
